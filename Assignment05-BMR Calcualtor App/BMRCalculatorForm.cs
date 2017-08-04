@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Assignment05_BMR_Calcualtor_App
 {
-    public partial class Form1 : Form
+    public partial class BMRCalculatorForm : Form
     {
-        public Form1()
+        public BMRCalculatorForm()
         {
             InitializeComponent();
         }
