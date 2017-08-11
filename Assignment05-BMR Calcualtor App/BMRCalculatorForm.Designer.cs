@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMRCalculatorForm));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LblAge = new System.Windows.Forms.Label();
             this.LblHeight = new System.Windows.Forms.Label();
@@ -148,7 +149,7 @@
             // btnCalculate
             // 
             this.btnCalculate.BackColor = System.Drawing.Color.Transparent;
-            this.btnCalculate.BackgroundImage = global::Assignment05_BMR_Calcualtor_App.Properties.Resources.BMRbackgroundimage;
+            this.btnCalculate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCalculate.BackgroundImage")));
             this.btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalculate.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCalculate.Location = new System.Drawing.Point(12, 299);
@@ -161,7 +162,7 @@
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.Transparent;
-            this.btnReset.BackgroundImage = global::Assignment05_BMR_Calcualtor_App.Properties.Resources.BMRbackgroundimage;
+            this.btnReset.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReset.BackgroundImage")));
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnReset.Location = new System.Drawing.Point(181, 299);
@@ -237,7 +238,7 @@
             // BMRCalculatorForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = global::Assignment05_BMR_Calcualtor_App.Properties.Resources.BMRbackgroundimage1;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(304, 441);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblResult);

@@ -121,16 +121,5 @@
   <data name="BMRbackgroundimage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BMRbackgroundimage1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="titleimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\titleimg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BMRbackgroundimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BMRbackgroundimage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BMRbackgroundimage2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BMRbackgroundimage2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="titleimg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\titleimg1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  
 </root>

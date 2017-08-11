@@ -63,49 +63,9 @@ namespace Assignment05_BMR_Calcualtor_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BMRbackgroundimage {
-            get {
-                object obj = ResourceManager.GetObject("BMRbackgroundimage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap BMRbackgroundimage1 {
             get {
                 object obj = ResourceManager.GetObject("BMRbackgroundimage1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap BMRbackgroundimage2 {
-            get {
-                object obj = ResourceManager.GetObject("BMRbackgroundimage2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap titleimg {
-            get {
-                object obj = ResourceManager.GetObject("titleimg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap titleimg1 {
-            get {
-                object obj = ResourceManager.GetObject("titleimg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
