@@ -22,7 +22,7 @@ namespace Assignment05_BMR_Calcualtor_App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BMRCalculatorForm());
+            Application.Run(new BMICalculatorForm());
         }
     }
 }

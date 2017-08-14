@@ -1,6 +1,6 @@
 ﻿namespace Assignment05_BMR_Calcualtor_App
 {
-    partial class BMRCalculatorForm
+    partial class BMICalculatorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMRCalculatorForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMICalculatorForm));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LblAge = new System.Windows.Forms.Label();
             this.LblHeight = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.textBox1.Location = new System.Drawing.Point(12, 391);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(280, 35);
+            this.textBox1.Size = new System.Drawing.Size(280, 38);
             this.textBox1.TabIndex = 0;
             // 
             // LblAge
@@ -66,7 +66,7 @@
             this.LblAge.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.LblAge.Location = new System.Drawing.Point(23, 99);
             this.LblAge.Name = "LblAge";
-            this.LblAge.Size = new System.Drawing.Size(62, 29);
+            this.LblAge.Size = new System.Drawing.Size(70, 31);
             this.LblAge.TabIndex = 1;
             this.LblAge.Text = "Age:";
             this.LblAge.Click += new System.EventHandler(this.label1_Click);
@@ -78,7 +78,7 @@
             this.LblHeight.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.LblHeight.Location = new System.Drawing.Point(23, 142);
             this.LblHeight.Name = "LblHeight";
-            this.LblHeight.Size = new System.Drawing.Size(89, 29);
+            this.LblHeight.Size = new System.Drawing.Size(101, 31);
             this.LblHeight.TabIndex = 1;
             this.LblHeight.Text = "Height:";
             this.LblHeight.Click += new System.EventHandler(this.label1_Click);
@@ -90,7 +90,7 @@
             this.LblWeight.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.LblWeight.Location = new System.Drawing.Point(23, 188);
             this.LblWeight.Name = "LblWeight";
-            this.LblWeight.Size = new System.Drawing.Size(94, 29);
+            this.LblWeight.Size = new System.Drawing.Size(106, 31);
             this.LblWeight.TabIndex = 1;
             this.LblWeight.Text = "Weight:";
             this.LblWeight.Click += new System.EventHandler(this.label1_Click);
@@ -102,6 +102,7 @@
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(100, 31);
             this.txtAge.TabIndex = 2;
+            this.txtAge.TextChanged += new System.EventHandler(this.txtAge_TextChanged);
             // 
             // txtHeight
             // 
@@ -110,6 +111,7 @@
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(100, 31);
             this.txtHeight.TabIndex = 2;
+            this.txtHeight.TextChanged += new System.EventHandler(this.txtHeight_TextChanged);
             // 
             // txtWeight
             // 
@@ -126,7 +128,7 @@
             this.rbtnMale.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.rbtnMale.Location = new System.Drawing.Point(29, 234);
             this.rbtnMale.Name = "rbtnMale";
-            this.rbtnMale.Size = new System.Drawing.Size(84, 33);
+            this.rbtnMale.Size = new System.Drawing.Size(90, 35);
             this.rbtnMale.TabIndex = 4;
             this.rbtnMale.TabStop = true;
             this.rbtnMale.Text = "Male";
@@ -140,7 +142,7 @@
             this.rbtnFemale.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.rbtnFemale.Location = new System.Drawing.Point(165, 234);
             this.rbtnFemale.Name = "rbtnFemale";
-            this.rbtnFemale.Size = new System.Drawing.Size(113, 33);
+            this.rbtnFemale.Size = new System.Drawing.Size(122, 35);
             this.rbtnFemale.TabIndex = 5;
             this.rbtnFemale.TabStop = true;
             this.rbtnFemale.Text = "Female";
@@ -158,6 +160,7 @@
             this.btnCalculate.TabIndex = 6;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = false;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // btnReset
             // 
@@ -171,6 +174,7 @@
             this.btnReset.TabIndex = 7;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // panel1
             // 
@@ -230,12 +234,12 @@
             this.lblTitle.ForeColor = System.Drawing.Color.Aqua;
             this.lblTitle.Location = new System.Drawing.Point(61, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(194, 29);
+            this.lblTitle.Size = new System.Drawing.Size(183, 29);
             this.lblTitle.TabIndex = 10;
-            this.lblTitle.Text = "BMR Calculator";
+            this.lblTitle.Text = "BMI Calculator";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // BMRCalculatorForm
+            // BMICalculatorForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -254,12 +258,12 @@
             this.Controls.Add(this.LblHeight);
             this.Controls.Add(this.LblAge);
             this.Controls.Add(this.textBox1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "BMRCalculatorForm";
+            this.Name = "BMICalculatorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BMR Calculator";
+            this.Text = "BMI Calculator";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
