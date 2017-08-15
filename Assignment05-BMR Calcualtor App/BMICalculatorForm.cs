@@ -12,9 +12,9 @@ using System.Threading;
 /*
  * Name - Chintan Patel
  * Student # 300622893
- * Date - Aug 14, 2017
+ * Date - Aug 15, 2017
  * Description - BMI Calculator 
- * Version: 0.4 - Part 2 - Added functionality to the BMI calculator app
+ * Version: 0.5 - Part 2 - Added multiline text box to indicate BMI Scale with appropriate background color.
  * https://www.youtube.com/watch?v=EcZQghn88vE
  */
 namespace Assignment05_BMR_Calcualtor_App
@@ -29,20 +29,7 @@ namespace Assignment05_BMR_Calcualtor_App
         {
             Application.Run(new HomePage());
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtHeight_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         //A Reset button that reset’s the screen to its original state
         private void btnReset_Click(object sender, EventArgs e)
         {
@@ -50,7 +37,10 @@ namespace Assignment05_BMR_Calcualtor_App
             txtHeight.Text = "";
             txtWeight.Text = "";
             txtResult.Text = "";
-
+            txtBMIScale.Text = "";
+            rbtnImperial.Checked = false;
+            rbtnMetric.Checked = false;
+            txtBMIScale.BackColor = Color.White;
             // enable all the textbox
             txtHeight.Enabled = true;
             txtWeight.Enabled = true;
@@ -59,7 +49,6 @@ namespace Assignment05_BMR_Calcualtor_App
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             //adding require local variables
-
             double bmi, Height, Weight;
 
             try
@@ -90,25 +79,45 @@ namespace Assignment05_BMR_Calcualtor_App
                     txtHeight.Enabled = false;
 
                     //BMI Metric
-                    if (lblMetric.Checked == true)
+                    if (rbtnMetric.Checked == true)
                     {
-
                         //The Formula for BMI Metric is as follows
                         bmi = Weight / ((Height) * (Height));
-                       txtResult.Text = Convert.ToString(bmi);       
+                        txtResult.Text = Convert.ToString(bmi);
+                       
                     }
 
                     //BMI Imperial
-                    else if (lblImperial.Checked == true)
+                    else if (rbtnImperial.Checked == true)
                     {
                         //The Formula for BMI Imperial is as follows
                         bmi = (Weight * 703) / ((Height) * (Height));
                         txtResult.Text = Convert.ToString(bmi);
-
-                        //List of BMI scale 
-
+                        
+                    }
+                    //List of BMI scale with change of appropriate background color
+                    if (Convert.ToDouble(txtResult.Text) <= 18.5)
+                    {
+                        txtBMIScale.Text = "Under Weight";
+                        txtBMIScale.BackColor = Color.Yellow;
+                    }
+                    else if (Convert.ToDouble(txtResult.Text) > 18.5 && Convert.ToDouble(txtResult.Text) <= 24.9)
+                    {
+                        txtBMIScale.Text = "Normal Weight";
+                        txtBMIScale.BackColor = Color.Green;
+                    }
+                    else if (Convert.ToDouble(txtResult.Text) >= 25 && Convert.ToDouble(txtResult.Text) <= 29.9)
+                    {
+                        txtBMIScale.Text = "Over Weight";
+                        txtBMIScale.BackColor = Color.Maroon;
+                    }
+                    else if (Convert.ToDouble(txtResult.Text) >= 30)
+                    {
+                        txtBMIScale.Text = "Obese";
+                        txtBMIScale.BackColor = Color.Red;
                     }
                 }
+
             }
             catch (Exception)
             {
@@ -116,12 +125,13 @@ namespace Assignment05_BMR_Calcualtor_App
                 txtHeight.Focus();
                 txtHeight.SelectAll();
             }
+
         }
         /* This code implemented to limit the user's entry to improve input validation
         https://www.youtube.com/watch?v=EcZQghn88vE */
         private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
             char ch = e.KeyChar;
             if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
             {
