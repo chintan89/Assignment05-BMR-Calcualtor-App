@@ -160,6 +160,7 @@
             // 
             // txtHeight
             // 
+            this.txtHeight.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtHeight.Location = new System.Drawing.Point(181, 105);
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(100, 38);

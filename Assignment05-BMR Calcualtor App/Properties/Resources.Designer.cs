@@ -63,6 +63,26 @@ namespace Assignment05_BMR_Calcualtor_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bmi2 {
+            get {
+                object obj = ResourceManager.GetObject("bmi2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bmi4 {
+            get {
+                object obj = ResourceManager.GetObject("bmi4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BMRbackgroundimage1 {
             get {
                 object obj = ResourceManager.GetObject("BMRbackgroundimage1", resourceCulture);

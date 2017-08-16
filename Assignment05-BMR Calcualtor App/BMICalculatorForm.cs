@@ -14,7 +14,7 @@ using System.Threading;
  * Student # 300622893
  * Date - Aug 15, 2017
  * Description - BMI Calculator 
- * Version: 0.5 - Part 2 - Added multiline text box to indicate BMI Scale with appropriate background color.
+ * Version: 0.6 - Modified splash screen function that displays beging of the disply BMI app
  * https://www.youtube.com/watch?v=EcZQghn88vE
  */
 namespace Assignment05_BMR_Calcualtor_App
@@ -22,13 +22,28 @@ namespace Assignment05_BMR_Calcualtor_App
     public partial class BMICalculatorForm : Form
     {
         public BMICalculatorForm()
-        {
+        {//splash screen
+            Thread t = new Thread(new ThreadStart(splash));
+            t.Start();
             InitializeComponent();
+            string str = string.Empty;
+            for (int i = 0; i < 10000; i++)
+            {
+                str += ToString();
+            }
+            t.Abort();
         }
-        public void ProgressStart()
+        void splash()
         {
-            Application.Run(new HomePage());
+            SplashScreen.SplashForm frm = new SplashScreen.SplashForm();
+            frm.AppName = "BMI Calculator App";
+            frm.Icon = Properties.Resources.bmi2;
+            frm.ShowIcon = true;
+            frm.ShowInTaskbar = true;
+            frm.BackgroundImage = Properties.Resources.bmi4;
+            Application.Run(frm);
         }
+     
 
         //A Reset button that reset’s the screen to its original state
         private void btnReset_Click(object sender, EventArgs e)
@@ -84,7 +99,7 @@ namespace Assignment05_BMR_Calcualtor_App
                         //The Formula for BMI Metric is as follows
                         bmi = Weight / ((Height) * (Height));
                         txtResult.Text = Convert.ToString(bmi);
-                       
+
                     }
 
                     //BMI Imperial
@@ -93,7 +108,7 @@ namespace Assignment05_BMR_Calcualtor_App
                         //The Formula for BMI Imperial is as follows
                         bmi = (Weight * 703) / ((Height) * (Height));
                         txtResult.Text = Convert.ToString(bmi);
-                        
+
                     }
                     //List of BMI scale with change of appropriate background color
                     if (Convert.ToDouble(txtResult.Text) <= 18.5)
@@ -146,5 +161,6 @@ namespace Assignment05_BMR_Calcualtor_App
                 e.Handled = true;
             }
         }
+
     }
 }
