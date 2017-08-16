@@ -14,7 +14,7 @@ using System.Threading;
  * Student # 300622893
  * Date - Aug 15, 2017
  * Description - BMI Calculator 
- * Version: 0.6 - Modified splash screen function that displays beging of the disply BMI app
+ * Version: 0.7 - Modified splash screen disply time from 10sec. to 3sec.
  * https://www.youtube.com/watch?v=EcZQghn88vE
  */
 namespace Assignment05_BMR_Calcualtor_App
@@ -27,7 +27,7 @@ namespace Assignment05_BMR_Calcualtor_App
             t.Start();
             InitializeComponent();
             string str = string.Empty;
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 3000; i++)
             {
                 str += ToString();
             }
@@ -119,7 +119,7 @@ namespace Assignment05_BMR_Calcualtor_App
                     else if (Convert.ToDouble(txtResult.Text) > 18.5 && Convert.ToDouble(txtResult.Text) <= 24.9)
                     {
                         txtBMIScale.Text = "Normal Weight";
-                        txtBMIScale.BackColor = Color.Green;
+                        txtBMIScale.BackColor = Color.LightGreen;
                     }
                     else if (Convert.ToDouble(txtResult.Text) >= 25 && Convert.ToDouble(txtResult.Text) <= 29.9)
                     {
@@ -161,6 +161,6 @@ namespace Assignment05_BMR_Calcualtor_App
                 e.Handled = true;
             }
         }
-
+        
     }
 }

@@ -51,7 +51,7 @@
             this.txtResult.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtResult.Enabled = false;
-            this.txtResult.Location = new System.Drawing.Point(18, 329);
+            this.txtResult.Location = new System.Drawing.Point(18, 332);
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
             this.txtResult.Size = new System.Drawing.Size(274, 38);
@@ -91,7 +91,7 @@
             this.lblResult.BackColor = System.Drawing.Color.Transparent;
             this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResult.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblResult.Location = new System.Drawing.Point(15, 310);
+            this.lblResult.Location = new System.Drawing.Point(15, 313);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(94, 16);
             this.lblResult.TabIndex = 9;
@@ -118,11 +118,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.rbtnImperial, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.rbtnMetric, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 41);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 55);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(277, 42);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(277, 44);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
             // rbtnImperial
@@ -200,7 +200,7 @@
             this.txtBMIScale.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBMIScale.Enabled = false;
             this.txtBMIScale.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtBMIScale.Location = new System.Drawing.Point(18, 390);
+            this.txtBMIScale.Location = new System.Drawing.Point(18, 385);
             this.txtBMIScale.Multiline = true;
             this.txtBMIScale.Name = "txtBMIScale";
             this.txtBMIScale.ReadOnly = true;
